@@ -1,12 +1,17 @@
 $(document).ready(function() {
-  $("div").hide();
+  $(".beta").hide();
 
   $(".btn-warning").on("click",function(){
-    $("h1").html("Howdy");
+    $("h1").text(function(i, v){
+      return v === 'Yo' ? 'Howdy' : 'Yo' 
+    })
   });
 
   $(".btn-primary").on("click", function(){
-    $("div").toggle();
+    $(".beta").toggle(2000);
+    $(this).text(function(i, v){
+      return v === 'See More' ? 'See Less' : 'See More'
+    })
   });
 });
 
