@@ -1,9 +1,13 @@
-var btnMove = document.getElementById("changeH");
-var htext = document.getElementsByTagName("h1");
-btnMove.addEventListener("click", changeTo);
+$(document).ready(function() {
+  $("div").hide();
 
-debugger;
-function changeTo (){
-// htext[0].setAttribute("class", "color:red;");
-btnMove.innerHTML = "changed?";
-}
+  $(".btn-warning").on("click",function(){
+    $("h1").html("Howdy");
+  });
+
+  $(".btn-primary").on("click", function(){
+    $("div").toggle();
+  });
+});
+
+
